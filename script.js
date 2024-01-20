@@ -1,10 +1,8 @@
 const result = document.getElementById("result");
 const hist = document.getElementById("hist");
-var number = ''
-var temp1, temp0 = '', operator;
-var histVal = '';
-var resultVal = '';
+var number = '', temp1, temp0 = '', operator, histVal = '', resultVal = '';
 var isStart = true;
+
 function appendToNumber(button){
     var digit = button.textContent;
     number += digit;
@@ -35,9 +33,7 @@ function hardReset(){
 }
 
 function setOperation(button){
-    
     operator = button.textContent;
-    console.log("this is " + operator);
     temp1 = result.textContent;
     histVal += temp1 + ' ' + operator + ' ';
     hist.textContent = histVal
@@ -57,7 +53,6 @@ function setOperation(button){
 function startOperation(){
     var number1 = resultVal == '' ? temp1 : resultVal;
     var number2 = result.textContent;
-    // var res = operation(number1, number2, operator);
     histVal += number2 + ' ';
     hist.textContent = histVal
     var resultValTemp = operation(number1, number2, operator) 
@@ -67,7 +62,6 @@ function startOperation(){
 function operation(number1, number2, operator){
     number1 = Number(number1)
     number2 = Number(number2)
-    console.log(number1, number2, operator)
     if(operator === '+'){
         return number1 + number2;
     }else if(operator == '-'){
