@@ -7,6 +7,82 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main>
+        <div class="wrapper">
+            <div class="result" id="result"></div>
+            <div class="button">
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <button onclick="reset()" style="width: 100%;">C</button>
+                        </td>
+                        <td>
+                            <button>%</button>
+                        </td>
+                        <td>
+                            <button onclick="setOperation(this)">/</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="appendToNumber(this)">7</button>
+                        </td>
+                        <td>
+                            <button onclick="appendToNumber(this)">8</button>
+                        </td>
+                        <td>
+                            <button onclick="appendToNumber(this)">9</button>
+                        </td>
+                        <td>
+                            <button onclick="setOperation(this)">*</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="appendToNumber(this)">4</button>
+                        </td>
+                        <td>
+                            <button onclick="appendToNumber(this)">5</button>
+                        </td>
+                        <td>
+                            <button onclick="appendToNumber(this)">6</button>
+                        </td>
+                        <td>
+                            <button onclick="setOperation(this)">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="appendToNumber(this)">1</button>
+                        </td>
+                        <td>
+                            <button onclick="appendToNumber(this)">2</button>
+                        </td>
+                        <td>
+                            <button onclick="appendToNumber(this)">3</button>
+                        </td>
+                        <td>
+                            <button onclick="setOperation(this)">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="appendToNumber(this)">0</button>
+                        </td>
+                        <td>
+                            <button>.</button>
+                        </td>
+                        <td>
+                            <button onclick="delete()"><-</button>
+                        </td>
+                        <td>
+                            <button onclick="startOperation()">=</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
