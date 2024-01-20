@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Concert+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <main>
         <div class="wrapper">
-            <div class="result" id="result"></div>
+            <div class="result">
+                <div id="hist"></div>
+                <div id="result"></div>
+            </div>
             <div class="button">
                 <table>
                     <tr>
                         <td colspan="2">
-                            <button onclick="reset()" style="width: 100%;">C</button>
+                            <button onclick="hardReset()" style="width: 100%;">C</button>
                         </td>
                         <td>
                             <button>%</button>
@@ -73,7 +83,7 @@
                             <button>.</button>
                         </td>
                         <td>
-                            <button onclick="delete()"><-</button>
+                            <button onclick="deleteDigit()"><- </button>
                         </td>
                         <td>
                             <button onclick="startOperation()">=</button>
@@ -85,4 +95,5 @@
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>
